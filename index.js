@@ -37,8 +37,8 @@ app.use(fileUpload());
 
 const port = process.env.PORT || 5006;
 
-const accountSid = 'ACdfafe8e62f05cfdef7987b27a076d914';
-const authToken = 'f4d2a6469b708188c2f2b9fd959ebaa2';
+const accountSid = process.env.ACCOUNT_SID;
+const authToken = process.env.ACCOUNT_AUTH_TOKEN;
 
 const client = require('twilio')(accountSid, authToken);
 
